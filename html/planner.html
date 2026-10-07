@@ -1,23 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Planner | Mativa</title>
-  <meta name="description" content="Organize assignments, revision, exams, and personal tasks in a simple academic planner.">
-  <meta property="og:title" content="Academic Planner | Mativa">
-  <meta property="og:description" content="Organize assignments, revision, exams, and personal tasks in a simple academic planner.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js" defer></script>
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">m<span>.</span></span>Mativa<span class="brand-dot">.</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Me</a><a href="projects.html">Projects</a><a href="planner.html" aria-current="page">Academic Planner</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="contact.html">Let’s connect <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></header>
-<main id="main"><section class="page-intro container"><div class="eyebrow"><span></span>A LITTLE STRUCTURE. A LOT OF POSSIBILITY.</div><h1>Make room for progress<span class="blue-dot">.</span></h1><p>One task at a time. Keep your studies organized and celebrate the small wins.</p></section>
-<section class="container planner-layout"><div class="planner-main"><div class="planner-heading"><h2>My study tasks</h2><span id="task-count">0 tasks</span></div><!-- Tasks live in a JavaScript array for this session. --><form id="task-form" class="task-form"><div class="field"><label for="task-input">What’s on your list?</label><input id="task-input" name="task" placeholder="e.g. Finish my programming assignment" maxlength="180" required></div><div class="field"><label for="task-category">Category</label><select id="task-category"><option>Assignment</option><option>Revision</option><option>Examination</option><option>Personal</option></select></div><button class="button primary" type="submit">+ Add task</button></form><div class="task-tabs" role="group" aria-label="Filter tasks"><button class="selected" data-filter="all" aria-pressed="true">All tasks</button><button data-filter="active" aria-pressed="false">To do</button><button data-filter="completed" aria-pressed="false">Completed</button></div><ul id="task-list" class="task-list"></ul><div id="empty-tasks" class="empty-state"><span class="empty-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18m-12 4h2m3 0h2"/></svg></span><h3>A fresh start.</h3><p>Your list is clear. Add your first task and take a small step forward.</p></div></div><aside class="planner-aside"><div class="progress-summary"><div class="eyebrow">TODAY’S PROGRESS</div><strong id="completion-percent">0%</strong><progress id="task-progress" value="0" max="100" aria-label="Task completion">0%</progress><div class="summary-numbers"><div><strong id="total-tasks">0</strong><span>Total tasks</span></div><div><strong id="completed-tasks">0</strong><span>Completed</span></div></div></div><div class="study-tip"><span class="icon-box"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></svg></span><h3>Study tip of the day</h3><p id="study-tip"></p><span>YOUR FUTURE SELF WILL THANK YOU.</span></div><p class="session-note">A fresh list for each visit. Tasks stay here until you refresh or leave this page.</p></aside></section></main>
-<footer><div class="container footer-top"><a class="brand" href="index.html"><span class="brand-mark">m<span>.</span></span>Mativa<span class="brand-dot">.</span></a><p>A little curiosity. A lot of possibility.</p><div class="socials"><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1-.2-2-1-2 4-.5 6-2 6-6a5 5 0 0 0-1-3c.4-1 .4-2 0-3-2 0-3 1-3 1a12 12 0 0 0-8 0S6 4 5 4c-.4 1-.4 2 0 3a5 5 0 0 0-1 3c0 4 2 5.5 6 6-.8.5-1 1-1 2v4"/></svg></a><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg></a><a href="contact.html" aria-label="Contact Adaora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a></div></div><div class="container footer-bottom"><span>© <span class="year">2026</span> Mativa. All rights reserved.</span><span>Made with curiosity & a little code <span class="blue-star">✳</span></span></div></footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Academic Planner | Mativa</title>
+        <meta
+            name="description"
+            content="Organize assignments, revision, exams, and personal tasks in a simple academic planner."
+        />
+        <meta property="og:title" content="Academic Planner | Mativa" />
+        <meta
+            property="og:description"
+            content="Organize assignments, revision, exams, and personal tasks in a simple academic planner."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/script.js" defer></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html"
+                    ><span class="brand-mark">m<span>.</span></span
+                    >Mativa<span class="brand-dot">.</span></a
+                ><button
+                    class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Home</a
+                    ><a href="/html/about.html">About Me</a
+                    ><a href="/html/projects.html">Projects</a
+                    ><a href="/html/planner.html" aria-current="page"
+                        >Academic Planner</a
+                    ><a href="/html/contact.html">Contact</a>
+                </nav>
+                <a class="nav-cta" href="/html/contact.html"
+                    >Let’s connect
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 17 17 7M7 7h10v10" /></svg
+                ></a>
+            </div>
+        </header>
+        <main id="main">
+            <section class="page-intro container">
+                <div class="eyebrow">
+                    <span></span>A LITTLE STRUCTURE. A LOT OF POSSIBILITY.
+                </div>
+                <h1>Make room for progress<span class="blue-dot">.</span></h1>
+                <p>
+                    One task at a time. Keep your studies organized and
+                    celebrate the small wins.
+                </p>
+            </section>
+            <section class="container planner-layout">
+                <div class="planner-main">
+                    <div class="planner-heading">
+                        <h2>My study tasks</h2>
+                        <span id="task-count">0 tasks</span>
+                    </div>
+                    <!-- Tasks live in a JavaScript array for this session. -->
+                    <form id="task-form" class="task-form">
+                        <div class="field">
+                            <label for="task-input">What’s on your list?</label
+                            ><input
+                                id="task-input"
+                                name="task"
+                                placeholder="e.g. Finish my programming assignment"
+                                maxlength="180"
+                                required
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="task-category">Category</label
+                            ><select id="task-category">
+                                <option>Assignment</option>
+                                <option>Revision</option>
+                                <option>Examination</option>
+                                <option>Personal</option>
+                            </select>
+                        </div>
+                        <button class="button primary" type="submit">
+                            + Add task
+                        </button>
+                    </form>
+                    <div
+                        class="task-tabs"
+                        role="group"
+                        aria-label="Filter tasks"
+                    >
+                        <button
+                            class="selected"
+                            data-filter="all"
+                            aria-pressed="true"
+                        >
+                            All tasks</button
+                        ><button data-filter="active" aria-pressed="false">
+                            To do</button
+                        ><button data-filter="completed" aria-pressed="false">
+                            Completed
+                        </button>
+                    </div>
+                    <ul id="task-list" class="task-list"></ul>
+                    <div id="empty-tasks" class="empty-state">
+                        <span class="empty-icon"
+                            ><svg
+                                viewBox="0 0 24 24"
+                                width="20"
+                                height="20"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <rect
+                                    x="3"
+                                    y="5"
+                                    width="18"
+                                    height="16"
+                                    rx="2"
+                                />
+                                <path
+                                    d="M16 3v4M8 3v4M3 11h18m-12 4h2m3 0h2"
+                                /></svg
+                        ></span>
+                        <h3>A fresh start.</h3>
+                        <p>
+                            Your list is clear. Add your first task and take a
+                            small step forward.
+                        </p>
+                    </div>
+                </div>
+                <aside class="planner-aside">
+                    <div class="progress-summary">
+                        <div class="eyebrow">TODAY’S PROGRESS</div>
+                        <strong id="completion-percent">0%</strong
+                        ><progress
+                            id="task-progress"
+                            value="0"
+                            max="100"
+                            aria-label="Task completion"
+                        >
+                            0%
+                        </progress>
+                        <div class="summary-numbers">
+                            <div>
+                                <strong id="total-tasks">0</strong
+                                ><span>Total tasks</span>
+                            </div>
+                            <div>
+                                <strong id="completed-tasks">0</strong
+                                ><span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="study-tip">
+                        <span class="icon-box"
+                            ><svg
+                                viewBox="0 0 24 24"
+                                width="20"
+                                height="20"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"
+                                /></svg
+                        ></span>
+                        <h3>Study tip of the day</h3>
+                        <p id="study-tip"></p>
+                        <span>YOUR FUTURE SELF WILL THANK YOU.</span>
+                    </div>
+                    <p class="session-note">
+                        A fresh list for each visit. Tasks stay here until you
+                        refresh or leave this page.
+                    </p>
+                </aside>
+            </section>
+        </main>
+        <footer>
+            <div class="container footer-top">
+                <a class="brand" href="index.html"
+                    ><span class="brand-mark">m<span>.</span></span
+                    >Mativa<span class="brand-dot">.</span></a
+                >
+                <p>A little curiosity. A lot of possibility.</p>
+                <div class="socials">
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="GitHub"
+                        ><svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1-.2-2-1-2 4-.5 6-2 6-6a5 5 0 0 0-1-3c.4-1 .4-2 0-3-2 0-3 1-3 1a12 12 0 0 0-8 0S6 4 5 4c-.4 1-.4 2 0 3a5 5 0 0 0-1 3c0 4 2 5.5 6 6-.8.5-1 1-1 2v4"
+                            /></svg></a
+                    ><a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn"
+                        ><svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path
+                                d="M7 10v7M7 7v.1M11 17v-7m0 3c0-4 6-4 6 0v4"
+                            /></svg></a
+                    ><a href="/html/contact.html" aria-label="Contact Adaora"
+                        ><svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="m3 6 9 7 9-7" /></svg
+                    ></a>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <span
+                    >© <span class="year">2026</span> Mativa. All rights
+                    reserved.</span
+                ><span
+                    >Made with curiosity & a little code
+                    <span class="blue-star">✳</span></span
+                >
+            </div>
+        </footer>
+    </body>
 </html>
+
